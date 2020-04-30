@@ -15,7 +15,7 @@ import { AboutComponent } from './about/about.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { EducationComponent } from './education/education.component';
 import { InterestsComponent } from './interests/interests.component';
-import { ProjectsComponent } from './projects/projects.component'
+import { ProjectsComponent } from './projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +41,6 @@ import { ProjectsComponent } from './projects/projects.component'
 export class AppModule { 
 
   constructor(library: FaIconLibrary){
-    // library.addIcons(faCoffee);
     library.addIconPacks(fab);
     library.addIconPacks(fas);
   }
