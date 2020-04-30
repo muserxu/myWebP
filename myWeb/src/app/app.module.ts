@@ -10,8 +10,10 @@ import { IntroComponent } from './intro/intro.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FontAwesomeModule, FaIconLibrary} from '@fortawesome/angular-fontawesome';
 import { fab } from '@fortawesome/free-brands-svg-icons';
+import { fas } from '@fortawesome/free-solid-svg-icons';
 import { AboutComponent } from './about/about.component';
-import { ExperienceComponent } from './experience/experience.component'
+import { ExperienceComponent } from './experience/experience.component';
+import { EducationComponent } from './education/education.component'
 
 @NgModule({
   declarations: [
@@ -20,6 +22,7 @@ import { ExperienceComponent } from './experience/experience.component'
     NavbarComponent,
     AboutComponent,
     ExperienceComponent,
+    EducationComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,6 +39,7 @@ export class AppModule {
   constructor(library: FaIconLibrary){
     // library.addIcons(faCoffee);
     library.addIconPacks(fab);
+    library.addIconPacks(fas);
   }
 
 }
