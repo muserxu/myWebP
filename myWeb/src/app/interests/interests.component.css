@@ -1,0 +1,15 @@
+.carousel-item { 
+    text-align: center; 
+}
+  
+img {
+    height: 500px;
+  }
+
+.carousel-control-prev-icon{
+    background-color: black;
+}
+
+.carousel-control-next-icon{
+    background-color: black;
+}

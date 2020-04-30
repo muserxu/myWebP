@@ -1,0 +1,83 @@
+<section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="interests">
+    <div class="w-100">
+      <h2 class="mb-5">Interests</h2>
+      <div class="container">
+        <div class="mb-5">
+            <h3>Sports</h3>
+            <div class="container">
+                <p class="mb-2">I enjoy playing variety of sports including soccer, basketball, badminton, skiing etc. I won 2 times CISAA U20 basketball champions and 3 times CISAA U20 soccer runner-up during my highschool</p>
+                <div id="basketball" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="img-fluid" src="../assets/basketball/basketball1.jpg" alt="First slide">
+                        </div>
+                        <div class="carousel-item " *ngFor="let image of basketballs">
+                            <img class="img-fluid" src="{{ image }}" alt="First slide">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#basketball" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#basketball" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div> 
+        </div>
+        <div class="mb-5">
+            <h3>Muse</h3>
+            <div class="container">
+                <p class="mb-2">Muse is a rock band from British. I have been a fan of the band for 10 years. I have been to their concert 3 times, those are my best experiences. </p>
+                <div id="muse" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="img-fluid" src="../assets/muse/muse1.jpg" alt="First slide">
+                        </div>
+                        <div class="carousel-item " *ngFor="let image of muse">
+                            <img class="img-fluid" src="{{ image }}" alt="First slide">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#muse" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#muse" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+      </div>
+
+        <div class="mb-5">
+            <h3>Cats: Pop</h3>
+            <div class="container">
+                <p class="mb-2">I am a cat person and I love to play with cats. My cat's name is Pop. She is a Scottish-Straight and she is 1 year old now. </p>
+                <div id="pop" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="img-fluid" src="../assets/pop/pop1.jpg" alt="First slide">
+                        </div>
+                        <div class="carousel-item " *ngFor="let image of pop">
+                            <img class="img-fluid" src="{{ image }}" alt="First slide">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#pop" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#pop" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+      
+      
+
+    </div>
+  </section>

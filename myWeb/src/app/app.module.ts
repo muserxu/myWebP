@@ -13,7 +13,9 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { AboutComponent } from './about/about.component';
 import { ExperienceComponent } from './experience/experience.component';
-import { EducationComponent } from './education/education.component'
+import { EducationComponent } from './education/education.component';
+import { InterestsComponent } from './interests/interests.component';
+import { ProjectsComponent } from './projects/projects.component'
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { EducationComponent } from './education/education.component'
     AboutComponent,
     ExperienceComponent,
     EducationComponent,
+    InterestsComponent,
+    ProjectsComponent,
   ],
   imports: [
     BrowserModule,
