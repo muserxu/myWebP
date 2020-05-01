@@ -3,7 +3,7 @@
 }
   
 img {
-    height: 500px;
+    max-height: 500px;
   }
 
 .carousel-control-prev-icon{
