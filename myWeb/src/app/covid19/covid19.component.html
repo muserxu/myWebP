@@ -1,0 +1,16 @@
+
+
+<section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="education">
+    <div class="w-100">
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-info active">
+              <input type="radio" name="options" id="option1" autocomplete="off" (click)=showLinear() checked> Linear
+            </label>
+            <label class="btn btn-info">
+              <input type="radio" name="options" id="option2" autocomplete="off" (click)=showLog()> Logarithmic
+            </label>
+          </div>
+        <ngx-chartjs [data]="confirmChart" type="line" [options]="defaultOptions" [hidden]="!isHideLog"></ngx-chartjs>
+        <ngx-chartjs [data]="confirmChart" type="line" [options]="logOptions" [hidden]="isHideLog"></ngx-chartjs>
+    </div>
+</section>

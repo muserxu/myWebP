@@ -16,6 +16,8 @@ import { ExperienceComponent } from './experience/experience.component';
 import { EducationComponent } from './education/education.component';
 import { InterestsComponent } from './interests/interests.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { Covid19Component } from './covid19/covid19.component';
+import { ChartjsModule } from '@ctrl/ngx-chartjs';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,7 @@ import { ProjectsComponent } from './projects/projects.component';
     EducationComponent,
     InterestsComponent,
     ProjectsComponent,
+    Covid19Component,
   ],
   imports: [
     BrowserModule,
@@ -34,6 +37,7 @@ import { ProjectsComponent } from './projects/projects.component';
     FormsModule,
     HttpClientModule,
     FontAwesomeModule,
+    ChartjsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

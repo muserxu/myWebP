@@ -5,7 +5,7 @@ import { ExperienceComponent } from './experience/experience.component';
 import { EducationComponent } from './education/education.component';
 import { InterestsComponent } from './interests/interests.component';
 import { ProjectsComponent } from './projects/projects.component';
-
+import { Covid19Component } from './covid19/covid19.component';
 
 
 
@@ -16,6 +16,7 @@ const routes: Routes = [
   { path: 'education', component: EducationComponent },
   { path: 'interests', component: InterestsComponent },
   { path: 'projects', component: ProjectsComponent },
+  { path: 'covid19', component: Covid19Component },
 ];
 
 @NgModule({
