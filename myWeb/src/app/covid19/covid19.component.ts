@@ -13,10 +13,14 @@ export class Covid19Component implements OnInit {
   constructor(private httpClient : HttpClient) { }
 
   confirmedURL: string = 'https://api.covid19api.com/total/dayone/country/canada/status/confirmed';
+  confirmedURL2: string = 'https://api.thevirustracker.com/free-api?countryTimeline=CA';
   confirmCase : number[] = [];
+  newCase : number[] = [];
   confirmDates = [];
   confirmChart = {};
-  isHideLog = true;
+  dailyChart = {};
+  isHideLog:boolean = true;
+  isAPIError:boolean = false;
 
   logOptions = {
     title: {
@@ -43,6 +47,14 @@ export class Covid19Component implements OnInit {
       text: 'Canada COVID19 Total Cases'
     },
   }
+
+  dailyOptions = {
+    title: {
+      display: true,
+      fontSize: 20,
+      text: 'Canada COVID19 Daily New Cases'
+    },
+  }
   
 
   getStatus(){
@@ -61,9 +73,56 @@ export class Covid19Component implements OnInit {
             fill: false,
             borderColor: 'orange',
             borderWidth: 1,
+            lineTension: 0.4,
           },
         ],
       };
+    })
+  }
+
+  getStatus2(){
+    this.httpClient.get(this.confirmedURL2).subscribe((data : any) => {
+      let stats = data.timelineitems[0];
+      if (stats.stat !== 'ok'){
+        console.log('API Error');
+        this.isAPIError = true;
+        return null;
+      }
+
+      for(let i in stats){
+        if (stats.hasOwnProperty(i) && i!=='stat'){
+          this.confirmCase.push(stats[i].total_cases);
+          this.newCase.push(stats[i].new_daily_cases);
+          let date = new Date(i);
+          this.confirmDates.push(formatDate(date, 'MMM.dd', 'en-US')); 
+        }
+      }
+      this.confirmChart = {
+        labels: this.confirmDates,
+        datasets: [
+          {
+            label: 'Canada Total Cases',
+            data: this.confirmCase,
+            fill: false,
+            borderColor: 'orange',
+            borderWidth: 3,
+            lineTension: 0.4,
+          },
+        ],
+      };
+      this.dailyChart = {
+        labels: this.confirmDates,
+        datasets: [
+          {
+            label: 'Canada daily New Cases',
+            data: this.newCase,
+            fill: false,
+            borderColor: 'blue',
+            borderWidth: 1,
+          },
+        ],
+      };
+
     })
   }
 
@@ -77,7 +136,7 @@ export class Covid19Component implements OnInit {
 
 
   ngOnInit() {
-    this.getStatus();
+    this.getStatus2();
     
 
   }
